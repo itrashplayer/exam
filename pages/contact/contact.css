@@ -3,6 +3,7 @@ ion-content {
 }
 h2 {
   color: #ffff;
+  text-align: center;
 }
 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
