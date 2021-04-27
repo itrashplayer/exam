@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h2>Title!</h2>
+<br/>
+
+<p><code>What activity are you planning to do?: </code></p>
+
+<ion-item>
+  <ion-label color="dark">Activity</ion-label>
+  <ion-select placeholder="Select" [(ngModel)]="Activity">
+    <ion-option value=1>Sitting at a desk</ion-option>
+    <ion-option value=2>Sitting, playing cards</ion-option>
+    <ion-option value=3>Standing at a desk</ion-option>
+    <ion-option value=4>Strolling at a slow pace</ion-option>
+    <ion-option value=5>Washing dishes</ion-option>
+    <ion-option value=6>Hatha yoga</ion-option>
+    <ion-option value=7>Fishing (sitting)</ion-option>
+    <ion-option value=8>Housework (cleaning, sweeping)</ion-option>
+    <ion-option value=9> Weight training (lighter weights)</ion-option>
+    <ion-option value=10>Golf (walking, pulling clubs)</ion-option>
+    <ion-option value=11>Brisk walking (3.5-4 mph)</ion-option>
+    <ion-option value=12>Weight training (heavier weights)</ion-option>
+    <ion-option value=13>Yard work (mowing, moderate effort)</ion-option>
+    <ion-option value=14>Swimming laps (leisurely pace)</ion-option>
+    <ion-option value=15>Walking at very brisk pace (4.5mph)</ion-option>
+    <ion-option value=16>Bicycling 12-14mph (flat terrain)</ion-option>
+    <ion-option value=17>Circuit training (minimal rest)</ion-option>
+    <ion-option value=18>Singles tennis</ion-option>
+    <ion-option value=19>Shoveling, digging ditches</ion-option>
+    <ion-option value=20>Competitive football</ion-option>
+    <ion-option value=21>Running (7mph)</ion-option>
+
+</ion-select>
+</ion-item>
+
+<p><code>Please input your weight: </code></p>
+
+<ion-item>
+  <ion-label>Kilograms </ion-label>
+  <ion-input type="number" [(ngModel)]="Kilograms">
+  </ion-input>
+</ion-item>
+
+<p><code>How long will you be doing the activity?: </code></p>
+
+<ion-item>
+  <ion-label>Minutes </ion-label>
+  <ion-input type="number" [(ngModel)]="Minutes">
+  </ion-input>
+</ion-item>
+
+<br/>
+<button ion-button color="secondary" (click)="getAns()">CALCULATE</button>
+
+
+<ion-item *ngIf="caloriesburned">
+<h2>You will burn: <code>{{caloriesburned}} calories.</code></h2></ion-item>
+
+<ion-item *ngIf="weightloss">
+<h2>You will lose: <code>{{weightloss}}  kilograms.</code></h2></ion-item>
+
+</ion-content>
