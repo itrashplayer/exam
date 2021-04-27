@@ -14,3 +14,9 @@ h3 {
   color: #ffff;
   font-size: medium;
 }
+
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffff;
+  font-size: small;
+}
